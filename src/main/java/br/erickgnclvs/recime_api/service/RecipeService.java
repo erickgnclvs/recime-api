@@ -42,10 +42,12 @@ public class RecipeService {
 
     private List<RecipeDTO> convertToDTOsWithPosition(List<Recipe> recipes) {
         List<RecipeDTO> recipeDTOs = new ArrayList<>();
-        for (int i = 0; i < recipes.size(); i++) {
-            RecipeDTO dto = new RecipeDTO(recipes.get(i));
-            dto.setPosition(i + 1);
-            recipeDTOs.add(dto);
+        if (recipes != null && !recipes.isEmpty()) {
+            for (int i = 0; i < recipes.size(); i++) {
+                RecipeDTO dto = new RecipeDTO(recipes.get(i));
+                dto.setPosition(i + 1);
+                recipeDTOs.add(dto);
+            }
         }
         return recipeDTOs;
     }

@@ -20,4 +20,7 @@ public class RecipeDTO {
         this.imageUrl = recipe.getImageUrl();
         this.score = recipe.getScore();
     }
+
+    public RecipeDTO() {
+    }
 }
