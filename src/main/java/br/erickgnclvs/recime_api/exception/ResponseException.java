@@ -1,7 +1,9 @@
 package br.erickgnclvs.recime_api.exception;
 
+import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
+@Getter
 public class ResponseException extends RuntimeException {
 
     private final HttpStatus status;
@@ -11,12 +13,4 @@ public class ResponseException extends RuntimeException {
         this.status = status;
     }
 
-    public ResponseException(String message, Throwable cause, HttpStatus status) {
-        super(message, cause);
-        this.status = status;
-    }
-
-    public HttpStatus getStatus() {
-        return status;
-    }
 }
