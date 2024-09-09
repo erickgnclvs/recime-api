@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "65f4bf46-96aa-461d-819f-b8f18582314b",
+		"name": "ReciMe API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26536058"
+	},
+	"item": [
+		{
+			"name": "Get Trending Recipes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/recipes/trending"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Filtered Recipes - Valid Difficulty",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/recipes/trending/filter?difficulty=easy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"recipes",
+						"trending",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "difficulty",
+							"value": "easy"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Filtered Recipes - Invalid Difficulty",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/recipes/trending/filter?difficulty=invalid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"recipes",
+						"trending",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "difficulty",
+							"value": "invalid"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Filtered Recipes - No Difficulty",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/recipes/trending/filter"
+			},
+			"response": []
+		}
+	]
+}
