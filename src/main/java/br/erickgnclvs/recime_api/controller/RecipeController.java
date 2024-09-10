@@ -24,8 +24,10 @@ public class RecipeController {
         return ResponseEntity.ok(recipes);
     }
 
+    // I think it would be a better approach if we did only one request mapping (/trending) with the difficulty param being optional,
+    // but as I understood from the code challenge it should be 2 different routes
     @GetMapping("/trending/filter")
-    public ResponseEntity<List<RecipeDTO>> getFilteredRecipes(@RequestParam(required = false) String difficulty) {
+    public ResponseEntity<List<RecipeDTO>> getFilteredRecipes(@RequestParam String difficulty) {
         List<RecipeDTO> recipes = recipeService.getFilteredRecipes(difficulty);
         return ResponseEntity.ok(recipes);
     }
