@@ -12,6 +12,9 @@ public class RecipeDTO {
     private String imageUrl;
     private int score;
     private int position;
+    private String recipeText;
+    private String summarizedText;
+
 
     public RecipeDTO(Recipe recipe) {
         this.id = recipe.getId();
@@ -19,6 +22,7 @@ public class RecipeDTO {
         this.difficulty = recipe.getDifficulty();
         this.imageUrl = recipe.getImageUrl();
         this.score = recipe.getScore();
+        this.recipeText = recipe.getRecipeText();
     }
 
     public RecipeDTO() {

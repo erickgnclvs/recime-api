@@ -22,4 +22,6 @@ public class Recipe {
     private String imageUrl;
     private int score;
 
+    private String recipeText;
+
 }
